@@ -127,6 +127,21 @@ export
       Our promise is to deliver high-quality content on time while consistently exceeding expectations.
     `
   },
+  {
+    title: "Why we are the best",
+    description:
+    `Refine. Enhance. Perfect."
+2. "Where words meet perfection"
+3. "Elevate your voice, refine your message"
+4. "Precision editing for exceptional content"
+5. "Transforming words, transforming worlds"
+6. "The edit that makes the difference"
+7. "Clarity, coherence, and craftsmanship"
+8. "Your story, refined"
+9. "Expert editors, exceptional results"
+10. "Polish, precision, and passion"
+`
+  },
 ];
 export const pricingOptions = [
   {
