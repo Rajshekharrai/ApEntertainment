@@ -11,7 +11,7 @@ const HeroSection = () => {
   <span className="text-4xl sm:text-6xl lg:text-7xl text-center tracking-wide">
     {" "}house
   </span>
-  <span className="bg-gradient-to-r from-orange-500 to-red-800 text-transparent bg-clip-text">
+  <span className="bg-gradient-to-r from-orange-500 to-yellowDark text-transparent bg-clip-text">
     {" "}for Dreamers
   </span>
 </h1>

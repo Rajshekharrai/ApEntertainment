@@ -1,4 +1,5 @@
 import { CheckCircle2 } from "lucide-react";
+import SlidingBrands from "./brand";
 
 const Offers = () => {
   return (
@@ -10,22 +11,17 @@ const Offers = () => {
       <p className="text-center text5xl text-lg">
         <b>We specialize in creating engaging content across various platforms, including:</b>
       </p>
-      
+
       {/* Specializations Section */}
       <section className="py-10">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-gray-800 mb-6">
-          </h2>
-          <p className="text-gray-600 text-lg mb-12">
-          </p>
-
           {/* Specialization Blocks */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
             {/* Documentary */}
             <div className="bg-white shadow-lg rounded-lg p-6 transform hover:scale-105 transition-all duration-300 ease-in-out">
               <img
                 className="w-32 h-32 mx-auto mb-6"
-                src="/images/documentary-logo.png" // Replace with actual image path
+                src="/images/documentary-logo.png"
                 alt="Documentary"
               />
               <h3 className="text-xl font-semibold text-gray-800 mb-4">Documentaries</h3>
@@ -38,7 +34,7 @@ const Offers = () => {
             <div className="bg-white shadow-lg rounded-lg p-6 transform hover:scale-105 transition-all duration-300 ease-in-out">
               <img
                 className="w-32 h-32 mx-auto mb-6"
-                src="/images/entertainment-logo.png" // Replace with actual image path
+                src="/images/entertainment-logo.png"
                 alt="Entertainment"
               />
               <h3 className="text-xl font-semibold text-gray-800 mb-4">Entertainment Videos</h3>
@@ -51,7 +47,7 @@ const Offers = () => {
             <div className="bg-white shadow-lg rounded-lg p-6 transform hover:scale-105 transition-all duration-300 ease-in-out">
               <img
                 className="w-32 h-32 mx-auto mb-6"
-                src="/src/assets/expertise/logo1.png" // Replace with actual image path
+                src="/src/assets/expertise/logo1.png"
                 alt="Commercials"
               />
               <h3 className="text-xl font-semibold text-gray-800 mb-4">Commercials</h3>
@@ -64,7 +60,7 @@ const Offers = () => {
             <div className="bg-white shadow-lg rounded-lg p-6 transform hover:scale-105 transition-all duration-300 ease-in-out">
               <img
                 className="w-32 h-32 mx-auto mb-6"
-                src="/images/social-media-logo.png" // Replace with actual image path
+                src="/images/social-media-logo.png"
                 alt="Social Media"
               />
               <h3 className="text-xl font-semibold text-gray-800 mb-4">Social Media Content</h3>
@@ -77,7 +73,7 @@ const Offers = () => {
             <div className="bg-white shadow-lg rounded-lg p-6 transform hover:scale-105 transition-all duration-300 ease-in-out">
               <img
                 className="w-32 h-32 mx-auto mb-6"
-                src="/images/corporate-logo.png" // Replace with actual image path
+                src="/images/corporate-logo.png"
                 alt="Corporate"
               />
               <h3 className="text-xl font-semibold text-gray-800 mb-4">Corporate Videos</h3>
@@ -90,7 +86,7 @@ const Offers = () => {
             <div className="bg-white shadow-lg rounded-lg p-6 transform hover:scale-105 transition-all duration-300 ease-in-out">
               <img
                 className="w-32 h-32 mx-auto mb-6"
-                src="/images/explainer-logo.png" // Replace with actual image path
+                src="/images/explainer-logo.png"
                 alt="Explainer"
               />
               <h3 className="text-xl font-semibold text-gray-800 mb-4">Explainer Videos</h3>
@@ -103,7 +99,7 @@ const Offers = () => {
             <div className="bg-white shadow-lg rounded-lg p-6 transform hover:scale-105 transition-all duration-300 ease-in-out">
               <img
                 className="w-32 h-32 mx-auto mb-6"
-                src="/images/animated-logo.png" // Replace with actual image path
+                src="/images/animated-logo.png"
                 alt="Animated"
               />
               <h3 className="text-xl font-semibold text-gray-800 mb-4">Animated Videos</h3>
@@ -114,6 +110,11 @@ const Offers = () => {
           </div>
         </div>
       </section>
+
+      {/* Sliding Brands Component */}
+      <div className="mt-16">
+        <SlidingBrands />
+      </div>
     </div>
   );
 };

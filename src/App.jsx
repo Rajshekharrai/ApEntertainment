@@ -29,6 +29,7 @@ const App = () => {
                 <Pricing />
                 <Testimonials />
                 <SocialMediaPopup/>
+                <SlidingBrands />
               </>
             }
           />
@@ -39,7 +40,6 @@ const App = () => {
         </Routes>
       </div>
       <br /><br /><br />
-      <SlidingBrands />
       <Footer />
     </Router>
     </>

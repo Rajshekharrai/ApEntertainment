@@ -1,16 +1,24 @@
 import React, { useState, useEffect } from "react";
 
 const brands = [
-  "/src/assets/brands/brand1.png",
-  "/src/assets/brands/brand1.png",
-  "/src/assets/brands/brand1.png",
-  "/src/assets/brands/brand1.png",
-  "/src/assets/brands/brand1.png",
-  "/src/assets/brands/brand1.png",
-  "/src/assets/brands/brand1.png",
-  "/src/assets/brands/brand1.png",
-  "/src/assets/brands/brand1.png",
-  "/src/assets/brands/brand1.png",
+  "/src/assets/brands/IMG-20250201-WA0026.jpg",
+  "/src/assets/brands/IMG-20250201-WA0041.jpg",
+  "/src/assets/brands/IMG-20250201-WA0031.jpg",
+  "/src/assets/brands/IMG-20250201-WA0032.jpg",
+  "/src/assets/brands/IMG-20250201-WA0033.jpg",
+  "/src/assets/brands/IMG-20250201-WA0034.jpg",
+  "/src/assets/brands/IMG-20250201-WA0035.jpg",
+  "/src/assets/brands/IMG-20250201-WA0036.jpg",
+  "/src/assets/brands/IMG-20250201-WA0037.jpg",
+  "/src/assets/brands/IMG-20250201-WA0038.jpg",
+  "/src/assets/brands/IMG-20250201-WA0039.jpg",
+  "/src/assets/brands/IMG-20250201-WA0040.jpg",
+  "/src/assets/brands/IMG-20250201-WA00341.jpg",
+  "/src/assets/brands/IMG-20250201-WA00342.jpg",
+  "/src/assets/brands/IMG-20250201-WA00343.jpg",
+  "/src/assets/brands/IMG-20250201-WA00344             .jpg",
+  "/src/assets/brands/IMG-20250201-WA00345.jpg",
+  "/src/assets/brands/IMG-20250201-WA00346.jpg",
 ];
 
 const SlidingBrands = () => {

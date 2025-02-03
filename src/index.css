@@ -12,3 +12,11 @@
 body{
 font-family: "montserrat";
 }
+.custom-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.custom-scroll {
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
+}
