@@ -7,6 +7,7 @@ export default {
   theme: {
     extend: {
       colors: {
+        halfgrey:'#757474',
         yellowLight: '#ffda50', 
         yellowDark: '#fdb714', 
         grayDark: '#262626',   
@@ -17,7 +18,7 @@ export default {
           200: '#d6baa7',
           300: '#c69f89',
           400: '#b7856b',
-          500: '#a66b51', // Primary brown shade
+          500: '#a66b51', 
           600: '#8a5541',
           700: '#6c4032',
           800: '#4d2b22',

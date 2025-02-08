@@ -12,6 +12,11 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import SlidingBrands from "./components/brand";
 import AboutUs from "./components/about";
 import SocialMediaPopup from "./components/socialpop";
+import ContentPage from "./components/content";
+import DevelopmentServicesPage from "./components/Web";
+import GraphicServicesPage from "./components/graphics";
+import EcommerceServicesPage from "./components/ecom";
+import AudioServicesPage from "./components/Audio";
 const App = () => {
   return (
     <>
@@ -37,6 +42,11 @@ const App = () => {
           <Route path="/components/photography" element={<PhotographyServices />} />
           <Route path="/offer" element={<Offers />} />
           <Route path="/about" element={<AboutUs/>} />
+          <Route path="/components/content" element={<ContentPage/>} />
+          <Route path="/components/Graphics" element={<GraphicServicesPage/>} />
+          <Route path="/components/Audio" element={<AudioServicesPage/>} />
+          <Route path="/components/Web" element={<DevelopmentServicesPage/>} />
+          <Route path="/components/ecom" element={<EcommerceServicesPage/>} />
         </Routes>
       </div>
       <br /><br /><br />

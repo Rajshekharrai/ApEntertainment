@@ -18,19 +18,17 @@ const FeatureSection = () => {
       <div className="flex flex-wrap mt-10 lg:mt-20">
         {features.map((feature, index) => (
           <Link
-            to={`${feature.href}`} 
+            to={`${feature.href}`}
             key={index}
             className="w-full sm:w-1/2 lg:w-1/3 cursor-pointer transition-all duration-300"
           >
-            <div className="flex p-6 rounded-lg shadow-md hover:scale-105 transform transition-all duration-300 ease-in-out">
-              <div className="flex mx-6 h-16 w-16 p-4 bg-neutral-900 text-orange-700 justify-center items-center rounded-full">
+            <div className="flex flex-col h-[300px] p-6 rounded-lg shadow-md hover:scale-105 transform transition-all duration-300 ease-in-out">
+              <div className="flex mx-auto mb-6 h-16 w-16 p-4 bg-neutral-900 text-orange-700 justify-center items-center rounded-full">
                 {feature.icon}
               </div>
-              <div>
-                <h5 className="mt-1 mb-6 text-xl font-semibold">{feature.text}</h5>
-                <p className="text-md text-neutral-500 mb-4">{feature.description}</p>
-                <span className="text-blue-600 font-medium">Learn more...</span>
-              </div>
+              <h5 className="mt-1 mb-2 text-xl font-semibold text-center">{feature.text}</h5>
+              <p className="text-md text-neutral-500 mb-4 text-center">{feature.description}</p>
+              <span className="text-blue-600 font-medium text-center mt-auto">Learn more...</span>
             </div>
           </Link>
         ))}
@@ -40,4 +38,3 @@ const FeatureSection = () => {
 };
 
 export default FeatureSection;
-

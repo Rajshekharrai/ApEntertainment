@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { ToastContainer, toast } from "react-toastify"; 
 import "react-toastify/dist/ReactToastify.css"; 
 import emailjs from "emailjs-com";
+import { FaFacebook, FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -57,22 +58,23 @@ const Contact = () => {
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      className="max-w-7xl mx-auto p-6 bg-gradient-to-br from-gray-100 to-blue-50 rounded-lg shadow-xl"
+      className="max-w-7xl mx-auto p-6 bg-yellowLight rounded-lg shadow-xl"
     >
       
       <ToastContainer />
 
       <motion.h2
-        className="text-4xl font-bold text-center text-yellowDark mb-10"
+        className="text-4xl font-bold text-center text-white mb-10"
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
-        We'd Love To Help!
+        <p>AP Entertainment and Production</p>
+        <p>We'd Love To Help!</p>
       </motion.h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-        {/* Left Column: Contact Form */}
+        
         <motion.div
           className="bg-white p-6 rounded-lg shadow-md space-y-6"
           initial={{ x: -100, opacity: 0 }}
@@ -88,9 +90,10 @@ const Contact = () => {
                 type="text"
                 name="name"
                 id="name"
-                className="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 value={formData.name}
                 onChange={handleChange}
+                placeholder="Enter your full name"
                 required
               />
             </div>
@@ -103,9 +106,10 @@ const Contact = () => {
                 type="email"
                 name="email"
                 id="email"
-                className="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 value={formData.email}
                 onChange={handleChange}
+                placeholder="Enter your email address"
                 required
               />
             </div>
@@ -118,26 +122,14 @@ const Contact = () => {
                 type="tel"
                 name="phone"
                 id="phone"
-                className="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 value={formData.phone}
                 onChange={handleChange}
+                placeholder="Enter your phone number"
                 required
               />
             </div>
 
-            <div>
-              <label htmlFor="howDidYouHear" className="block text-lg font-medium text-gray-700">
-                How did you hear about us?
-              </label>
-              <input
-                type="text"
-                name="howDidYouHear"
-                id="howDidYouHear"
-                className="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                value={formData.howDidYouHear}
-                onChange={handleChange}
-              />
-            </div>
 
             <div>
               <label htmlFor="estimatedBudget" className="block text-lg font-medium text-gray-700">
@@ -147,38 +139,41 @@ const Contact = () => {
                 type="text"
                 name="estimatedBudget"
                 id="estimatedBudget"
-                className="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 value={formData.estimatedBudget}
                 onChange={handleChange}
+                placeholder="Enter your estimated budget"
               />
             </div>
 
             <div>
               <label htmlFor="videoType" className="block text-lg font-medium text-gray-700">
-                What kind of video do you want?
+                What kind of services do you want?
               </label>
               <input
                 type="text"
                 name="videoType"
                 id="videoType"
-                className="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 value={formData.videoType}
                 onChange={handleChange}
+                placeholder="Enter the type of video"
                 required
               />
             </div>
 
             <div>
               <label htmlFor="message" className="block text-lg font-medium text-gray-700">
-                Message
+                Brief
               </label>
               <textarea
                 name="message"
                 id="message"
                 rows="4"
-                className="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 value={formData.message}
                 onChange={handleChange}
+                placeholder="Enter your message"
                 required
               />
             </div>
@@ -192,7 +187,7 @@ const Contact = () => {
           </form>
         </motion.div>
 
-        {/* Right Column: Contact Details */}
+       
         <motion.div
           className="space-y-6"
           initial={{ x: 100, opacity: 0 }}
@@ -202,7 +197,7 @@ const Contact = () => {
           <h3 className="text-2xl font-semibold text-gray-800">Contact Details</h3>
           <p className="text-gray-600">Feel free to reach out to us through the following:</p>
           <div className="space-y-4">
-            {/* Email */}
+            
             <div className="flex items-center space-x-3">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -226,7 +221,7 @@ const Contact = () => {
               </a>
             </div>
 
-            {/* Phone */}
+           
             <div className="flex items-center space-x-3">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -267,31 +262,58 @@ const Contact = () => {
                 />
               </svg>
               <div className="flex flex-col space-y-4">
-  <div>
-    <h2 className="text-lg font-bold text-black">Head Office</h2>
-    <p className="text-sm text-gray-500">Change this add your address</p>
-  </div>
-  <div>
-    <h2 className="text-lg font-bold text-black">Mumbai Office</h2>
-    <p className="text-sm text-gray-500">Change this and add your another address here</p>
-  </div>
-</div>
-
-
+                <div>
+                  <h2 className="text-lg font-bold text-black">Head Office</h2>
+                  <p className="text-sm text-gray-500">Change this add your address</p>
+                </div>
+                <div>
+                  <h2 className="text-lg font-bold text-black">Mumbai Office</h2>
+                  <p className="text-sm text-gray-500">Change this and add your another address here</p>
+                </div>
+              </div>
             </div>
 
             {/* Social Media Links */}
             <div className="flex space-x-4">
-              {/* Social Media Icons (replace with actual links) */}
-              <a href="#" className="text-blue-600 hover:text-blue-800">
-                Facebook
+            <div className="flex items-center space-x-3">
+              
+              <a
+                href="https://wa.me/+919990149961"
+                className="text-lg text-blue-600 hover:underline"
+              >
+                <FaWhatsapp className="h-6 w-6 text-green-600" />
               </a>
-              <a href="#" className="text-blue-600 hover:text-blue-800">
-                Instagram
+            </div>
+
+            <div className="flex items-center space-x-3">
+             
+              <a
+                href="#"
+                className="text-lg text-blue-600 hover:underline"
+              >
+                 <FaFacebook className="h-6 w-6 text-gray-600" />
               </a>
-              <a href="#" className="text-blue-600 hover:text-blue-800">
-                LinkedIn
+            </div>
+
+             <div className="flex items-center space-x-3">
+              
+              <a
+                href="#"
+                className="text-lg text-blue-600 hover:underline"
+              >
+                <FaInstagram className="h-6 w-6 text-gray-600" />
               </a>
+            </div>
+
+            <div className="flex items-center space-x-3">
+              
+              <a
+                href="#"
+                className="text-lg text-blue-600 hover:underline"
+              >
+                <FaLinkedin className="h-6 w-6 text-gray-600" />
+              </a>
+            </div>
             </div>
           </div>
         </motion.div>

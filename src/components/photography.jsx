@@ -6,7 +6,7 @@ const PhotographyServices = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoaded(true);
-    }, 500); // 500ms delay for animation
+    }, 500);
     return () => clearTimeout(timer);
   }, []);
 
@@ -87,7 +87,7 @@ const PhotographyServices = () => {
   return (
     <div className="py-10">
       <div className="max-w-7xl mx-auto px-4">
-        <h1 className="text-5xl font-bold text-center text-yellowDark mb-14">
+        <h1 className="text-6xl font-bold text-center text-yellowDark mb-14 border-b-8 border-yellow-600 pb-4">
           Photography & Video Production Services
         </h1>
         <div className="space-y-12">
@@ -95,26 +95,24 @@ const PhotographyServices = () => {
             <div
               key={index}
               className={`flex flex-col lg:flex-row items-center bg-gray-400 shadow-xl rounded-xl overflow-hidden transform transition-all duration-700 ease-in-out ${
-  isLoaded ? "opacity-100 scale-100" : "opacity-0 scale-95"
+                isLoaded ? "opacity-100 scale-100" : "opacity-0 scale-95"
               }`}
               style={{ transitionDelay: `${index * 200}ms` }}
             >
-              {/* Left Side or Right Side: Heading with dark yellow background (Alternating cards) */}
               <div
                 className={`lg:w-1/2 w-full h-full p-8 flex justify-center items-center ${
                   index % 2 === 0 ? "order-last" : "order-first"
-                }`} // Alternate the order for each card
+                }`}
               >
-                <div className="bg-yellow-600 p-6 rounded-md w-full h-full flex justify-center items-center"> {/* Full width & height */}
+                <div className="bg-yellow-600 p-6 rounded-md w-full h-full flex justify-center items-center">
                   <h3 className="text-4xl font-bold text-black text-center">{service.title}</h3>
                 </div>
               </div>
 
-              {/* Right Side or Left Side: Description (Alternating cards) */}
               <div
                 className={`lg:w-1/2 w-full p-12 ${
                   index % 2 === 0 ? "" : "order-first"
-                }`} // Alternate the order for each card
+                }`}
               >
                 <ul className="list-disc space-y-4 text-gray-700 text-lg ml-6">
                   {service.items.map((item, idx) => (

@@ -16,7 +16,7 @@ const brands = [
   "/src/assets/brands/IMG-20250201-WA00341.jpg",
   "/src/assets/brands/IMG-20250201-WA00342.jpg",
   "/src/assets/brands/IMG-20250201-WA00343.jpg",
-  "/src/assets/brands/IMG-20250201-WA00344             .jpg",
+  "/src/assets/brands/IMG-20250201-WA00344.jpg",
   "/src/assets/brands/IMG-20250201-WA00345.jpg",
   "/src/assets/brands/IMG-20250201-WA00346.jpg",
 ];
